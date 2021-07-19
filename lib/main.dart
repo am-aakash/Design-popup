@@ -1,3 +1,4 @@
+import 'package:design_popup/finding_ride_popup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,9 +30,18 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => {
+          Navigator.push(
+            context,
+            //barrierColor: Colors.black54,
+            MaterialPageRoute(
+              //builder: (context) => FindingRidePopup(),
+              builder: (context) => RoundedAlertBox(),
+            ),
+          )
+        },
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.circle),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
